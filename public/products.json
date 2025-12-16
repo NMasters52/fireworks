@@ -1,0 +1,360 @@
+[
+  {
+    "id": "joker-24pk",
+    "name": "Joker",
+    "category": "mortar-shells",
+    "quantity": 24,
+    "unit": "pack",
+    "tags": ["Mortar", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "bowser-24pk",
+    "name": "Bowser",
+    "category": "mortar-shells",
+    "quantity": 24,
+    "unit": "pack",
+    "tags": ["Mortar", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "majin-buu-24pk-mixed",
+    "name": "Majin Buu",
+    "category": "mortar-shells",
+    "quantity": 24,
+    "unit": "pack",
+    "tags": ["Mortar", "Mixed"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": "18 color, 6 salute"
+  },
+
+  {
+    "id": "striper-6pk",
+    "name": "Striper",
+    "category": "salute-mortar-shells",
+    "quantity": 6,
+    "unit": "pack",
+    "tags": ["Mortar", "Salute"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "grim-reaper-24pk",
+    "name": "Grim Reaper",
+    "category": "salute-mortar-shells",
+    "quantity": 24,
+    "unit": "pack",
+    "tags": ["Mortar", "Salute"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "grim-reaper-6pk",
+    "name": "Grim Reaper",
+    "category": "salute-mortar-shells",
+    "quantity": 6,
+    "unit": "pack",
+    "tags": ["Mortar", "Salute"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "kag-24pk",
+    "name": "KAG",
+    "category": "salute-mortar-shells",
+    "quantity": 24,
+    "unit": "pack",
+    "tags": ["Mortar", "Salute"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "kag-6pk",
+    "name": "KAG",
+    "category": "salute-mortar-shells",
+    "quantity": 6,
+    "unit": "pack",
+    "tags": ["Mortar", "Salute"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+
+  {
+    "id": "dc-universe-100",
+    "name": "DC Universe",
+    "category": "cakes",
+    "quantity": 100,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "vendetta-88",
+    "name": "Vendetta",
+    "category": "cakes",
+    "quantity": 88,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "pyro-brat-118",
+    "name": "Pyro Brat",
+    "category": "cakes",
+    "quantity": 118,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "grogu-232",
+    "name": "Grogu",
+    "category": "cakes",
+    "quantity": 232,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "la-bruja-200",
+    "name": "La Bruja",
+    "category": "cakes",
+    "quantity": 200,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "ballerina-284",
+    "name": "Ballerina",
+    "category": "cakes",
+    "quantity": 284,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "here-we-go-341",
+    "name": "Here We Go",
+    "category": "cakes",
+    "quantity": 341,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "la-hechichara-200",
+    "name": "La Hechichara",
+    "category": "cakes",
+    "quantity": 200,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "willow-madness-100",
+    "name": "Willow Madness",
+    "category": "cakes",
+    "quantity": 100,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "show-in-a-box-288",
+    "name": "Show in a Box",
+    "category": "cakes",
+    "quantity": 288,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "color-mine-to-crossette-300",
+    "name": "Color Mine to Crossette",
+    "category": "cakes",
+    "quantity": 300,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "eye-of-the-tiger-122",
+    "name": "Eye of the Tiger",
+    "category": "cakes",
+    "quantity": 122,
+    "unit": "shots",
+    "tags": ["Cake", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+
+  {
+    "id": "bed-rock-100",
+    "name": "Bed Rock",
+    "category": "salute-cakes",
+    "quantity": 100,
+    "unit": "shots",
+    "tags": ["Cake", "Salute"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "dream-keeper-100",
+    "name": "Dream Keeper",
+    "category": "salute-cakes",
+    "quantity": 100,
+    "unit": "shots",
+    "tags": ["Cake", "Salute"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+
+  {
+    "id": "d-day-25",
+    "name": "D-Day",
+    "category": "big-bores",
+    "quantity": 25,
+    "unit": "shots",
+    "tags": ["Big Bore"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "mortal-instrument-50",
+    "name": "Mortal Instrument",
+    "category": "big-bores",
+    "quantity": 50,
+    "unit": "shots",
+    "tags": ["Big Bore"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "kung-flu-36",
+    "name": "Kung Flu",
+    "category": "big-bores",
+    "quantity": 36,
+    "unit": "shots",
+    "tags": ["Big Bore"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+  {
+    "id": "street-swagger-36",
+    "name": "Street Swagger",
+    "category": "big-bores",
+    "quantity": 36,
+    "unit": "shots",
+    "tags": ["Big Bore"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+
+  {
+    "id": "lock-and-load-8",
+    "name": "Lock and Load",
+    "category": "roman-candles",
+    "quantity": 8,
+    "unit": "shots",
+    "tags": ["Roman Candle", "Mixed"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": "4 color, 4 salute"
+  },
+  {
+    "id": "huuuge-baby-5",
+    "name": "Huuuge Baby",
+    "category": "roman-candles",
+    "quantity": 5,
+    "unit": "shots",
+    "tags": ["Roman Candle", "Salute"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+
+  {
+    "id": "border-buster-3pk-color",
+    "name": "Border Buster",
+    "category": "rockets",
+    "quantity": 3,
+    "unit": "pack",
+    "tags": ["Rocket", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": "color"
+  },
+  {
+    "id": "border-buster-3pk-salute",
+    "name": "Border Buster",
+    "category": "rockets",
+    "quantity": 3,
+    "unit": "pack",
+    "tags": ["Rocket", "Salute"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": "salute"
+  },
+  {
+    "id": "moon-traveler-6pk",
+    "name": "Moon Traveler",
+    "category": "rockets",
+    "quantity": 6,
+    "unit": "pack",
+    "tags": ["Rocket", "Color"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  },
+
+  {
+    "id": "snap-guns",
+    "name": "Snap Guns",
+    "category": "misc",
+    "unit": "single",
+    "tags": ["Novelty"],
+    "youtubeId": "",
+    "imagePublicId": "",
+    "description": ""
+  }
+]
