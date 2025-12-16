@@ -1,7 +1,17 @@
-import React from "react";
+import PageHeader from "../components/PageHeader";
+import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <div>
+      <PageHeader
+        title="Contact Us"
+        content="Fill out the form below with any questions or inquiries on orders! We will get back to you promptly."
+      />
+      <ContactForm />
+      {/* waiting on chris' email */}
+    </div>
+  );
 };
 
 export default Contact;
