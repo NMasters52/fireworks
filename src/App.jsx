@@ -1,12 +1,17 @@
+import { ContactCTA } from "./components/ContactCTA";
+import FeaturedProducts from "./components/FeaturedProducts";
 import { Hero } from "./components/Hero";
-import { Navbar } from "./components/Navbar";
+import { WhyChooseUs } from "./components/WhyChooseUs";
 
 const App = () => {
   return (
     <div className="w-auto bg-background">
-      <Navbar />
       <Hero />
-      <div className="max-w-3xl m-auto flex justify-center p-4 "></div>
+      <div className="max-w-3xl m-auto flex flex-col justify-center p-4">
+        <FeaturedProducts />
+        <WhyChooseUs />
+        <ContactCTA />
+      </div>
     </div>
   );
 };
