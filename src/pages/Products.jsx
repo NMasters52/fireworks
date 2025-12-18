@@ -1,5 +1,6 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
+import DirectCloudinaryTest from "../components/Test";
 
 const Products = () => {
   return (
@@ -10,6 +11,7 @@ const Products = () => {
           something specific use the filters to find the items you want."
       />
       <div className="max-w-3xl flex flex-col justify-center align-center"></div>
+      <DirectCloudinaryTest />
     </>
   );
 };

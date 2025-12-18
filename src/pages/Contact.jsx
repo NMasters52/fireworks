@@ -9,7 +9,6 @@ const Contact = () => {
         content="Fill out the form below with any questions or inquiries on orders! We will get back to you promptly."
       />
       <ContactForm />
-      {/* waiting on chris' email */}
     </div>
   );
 };
