@@ -1,9 +1,6 @@
-import { createImageURL } from "../utils/imageURL";
-
 const DirectCloudinaryTest = () => {
-  const imageURL = createImageURL("willow_maddness.jpg", "nmasters-dev");
-
-  console.log(imageURL);
+  const imageURL =
+    "https://res.cloudinary.com/nmasters-dev/image/upload/v1766254359/IN4OjmY4wMHBFxIcbuvRLbS2U1RKIHTf73C50anrhcA4gFo9_ixpdsl.png";
 
   return (
     <div className="p-4 bg-background text-text">
