@@ -5,12 +5,13 @@ import "./index.css";
 import App from "./App";
 import Products from "./pages/Products";
 import Contact from "./pages/Contact";
+import ProductDetails from "./pages/ProductDetails";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <div className="bg-background text-text min-h-screen flex flex-col">
+    <div className="flex flex-col min-h-screen bg-background text-text">
       {/* shared layout elements */}
       <Navbar />
 
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/" element={<App />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
         </Routes>
       </main>
 
