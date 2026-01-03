@@ -1,12 +1,14 @@
 "use client";
 
+import { Link } from "react-router-dom";
+
 export function Hero() {
   const pinkColor = "#D64D85";
   const pinkRgb = "214, 77, 133";
 
   return (
     <section
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
+      className="relative flex items-center justify-center w-full min-h-screen overflow-hidden"
       style={{ backgroundColor: "#1a1518" }}
     >
       {/* Particle Trail Background */}
@@ -122,10 +124,10 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 py-12">
+      <div className="relative z-10 flex flex-col items-center justify-center px-6 py-12 text-center">
         {/* Business Name */}
         <h1
-          className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-4"
+          className="mb-4 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl"
           style={{ color: "#FAF7F3" }}
         >
           Rasco<span style={{ color: pinkColor }}>FX</span>
@@ -133,17 +135,18 @@ export function Hero() {
 
         {/* Tagline */}
         <p
-          className="text-lg sm:text-xl md:text-2xl font-light mb-10 max-w-md"
+          className="max-w-md mb-10 text-lg font-light sm:text-xl md:text-2xl"
           style={{ color: "rgba(250, 247, 243, 0.85)" }}
         >
           We provide the best boom for your buck
         </p>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xs sm:max-w-none sm:w-auto">
+        {/* CTA Links */}
+        <div className="flex flex-col w-full max-w-xs gap-4 sm:flex-row sm:max-w-none sm:w-auto">
           {/* Primary CTA */}
-          <button
-            className="min-h-[12] px-8 py-3 rounded-lg font-semibold text-base transition-all duration-300 cursor-pointer hover:scale-[1.02] active:scale-[0.98]"
+          <Link
+            to="/products"
+            className="min-h-[12] px-8 py-3 rounded-lg font-semibold text-base text-center transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             style={{
               backgroundColor: pinkColor,
               color: "#FAF7F3",
@@ -156,11 +159,12 @@ export function Hero() {
             }}
           >
             View Products
-          </button>
+          </Link>
 
           {/* Secondary CTA */}
-          <button
-            className="min-h-[12] px-8 py-3 rounded-lg font-semibold text-base border-2 transition-all duration-300 cursor-pointer hover:bg-[#D64D85]/10 active:scale-[0.98]"
+          <Link
+            to="/contact"
+            className="min-h-[12] px-8 py-3 rounded-lg font-semibold text-base text-center border-2 transition-all duration-300 hover:bg-[#D64D85]/10 active:scale-[0.98]"
             style={{
               borderColor: pinkColor,
               color: pinkColor,
@@ -174,7 +178,7 @@ export function Hero() {
             }}
           >
             Contact Us
-          </button>
+          </Link>
         </div>
       </div>
     </section>

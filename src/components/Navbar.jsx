@@ -1,18 +1,25 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const baseLinkStyles =
+    "font-bold text-lg transition-colors duration-200 underline-offset-4";
+
+  const activeLinkStyles = `${baseLinkStyles} text-pink underline`;
+
+  const nonActiveLinkStyles = `${baseLinkStyles} text-text hover:text-pink hover:underline`;
+
   return (
-    <nav className="bg-background text-text sticky top-0 z-50 shadow-md">
+    <nav className="sticky top-0 z-50 shadow-md bg-background text-text">
       {/* Container */}
-      <div className="mx-auto flex max-w-screen-xl items-center justify-between px-4 py-3 sm:px-8">
+      <div className="flex items-center justify-between max-w-screen-xl px-4 py-3 mx-auto sm:px-8">
         {/* Logo */}
         <Link
           to="/"
-          className="text-2xl font-bold tracking-wide flex items-center gap-1"
+          className="flex items-center gap-1 text-2xl font-bold tracking-wide"
         >
           Rasco<span className="text-pink">FX</span>
         </Link>
@@ -32,52 +39,66 @@ export const Navbar = () => {
 
         {/* Desktop Nav Links */}
         <div className="hidden sm:flex sm:items-center sm:gap-8">
-          <Link
+          <NavLink
             to="/"
-            className="hover:text-pink transition-colors duration-200 font-bold text-lg cursor-pointer hover:underline underline-offset-4 underline-pink "
+            end
+            className={({ isActive }) =>
+              isActive ? activeLinkStyles : nonActiveLinkStyles
+            }
           >
             Home
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/products"
-            className="hover:text-pink transition-colors duration-200 font-bold text-lg cursor-pointer hover:underline underline-offset-4 underline-pink "
+            className={({ isActive }) =>
+              isActive ? activeLinkStyles : nonActiveLinkStyles
+            }
           >
             Products
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/contact"
-            className="hover:text-pink transition-colors duration-200 font-bold text-lg cursor-pointer hover:underline underline-offset-4 underline-pink "
+            className={({ isActive }) =>
+              isActive ? activeLinkStyles : nonActiveLinkStyles
+            }
           >
             Contact Us
-          </Link>
+          </NavLink>
         </div>
       </div>
 
       {/* Mobile Dropdown */}
       {menuOpen && (
-        <div className="sm:hidden bg-background border-t border-pink/40">
+        <div className="border-t sm:hidden bg-background border-pink/40">
           <div className="flex flex-col px-6 py-4 space-y-2">
-            <Link
+            <NavLink
               onClick={() => setMenuOpen(false)}
               to="/"
-              className="hover:text-pink transition-colors font-bold text-lg cursor-pointer hover:underline underline-offset-4 underline-pink "
+              end
+              className={({ isActive }) =>
+                isActive ? activeLinkStyles : nonActiveLinkStyles
+              }
             >
               Home
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               onClick={() => setMenuOpen(false)}
               to="/products"
-              className="hover:text-pink transition-colors font-bold text-lg cursor-pointer hover:underline underline-offset-4 underline-pink"
+              className={({ isActive }) =>
+                isActive ? activeLinkStyles : nonActiveLinkStyles
+              }
             >
               Products
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               onClick={() => setMenuOpen(false)}
               to="/contact"
-              className="hover:text-pink transition-colors font-bold text-lg cursor-pointer hover:underline underline-offset-4 underline-pink"
+              className={({ isActive }) =>
+                isActive ? activeLinkStyles : nonActiveLinkStyles
+              }
             >
               Contact Us
-            </Link>
+            </NavLink>
           </div>
         </div>
       )}
