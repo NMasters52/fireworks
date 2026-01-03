@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="w-auto bg-background">
       <Hero />
-      <div className="max-w-3xl m-auto flex flex-col justify-center p-4">
+      <div className="flex flex-col justify-center max-w-3xl p-4 m-auto">
         <FeaturedProducts />
         <WhyChooseUs />
         <ContactCTA />
