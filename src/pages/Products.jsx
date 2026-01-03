@@ -1,11 +1,22 @@
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import { fakeProducts } from "../data/fakeData.js";
+import { useState } from "react";
 
 const FALLBACK_IMAGE_URL =
   "https://res.cloudinary.com/nmasters-dev/image/upload/v1766254359/IN4OjmY4wMHBFxIcbuvRLbS2U1RKIHTf73C50anrhcA4gFo9_ixpdsl.png";
 
 const Products = () => {
+  const [filter, setFilter] = useState("");
+  console.log(filter);
+
+  const filteredProducts = fakeProducts.filter((product) => {
+    if (filter === "") return true;
+
+    return product.tags.includes(filter);
+  });
+  console.log(filteredProducts);
+
   return (
     <>
       <PageHeader
@@ -14,10 +25,28 @@ const Products = () => {
           something specific use the filters to find the items you want."
       />
 
-      <section className="px-8 sm:px-10 md:px-12 pb-10">
+      <section className="px-8 pb-10 sm:px-10 md:px-12">
         <div className="max-w-6xl m-auto">
+          <div className="p-4 mb-6 border-2 border-pink rounded-xl bg-black/20">
+            <label className="text-[var(--color-pink)] font-bold mr-4">
+              Filter By:
+            </label>
+            <select
+              className="p-2 border rounded-lg outline-none bg-background text-text border-pink/30"
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+            >
+              <option value="">All Products</option>
+              <option value="cakes">Cakes</option>
+              <option value="mortars">Mortars</option>
+              <option value="salutes">Salutes</option>
+              <option value="roman candles">Roman Candles</option>
+              <option value="misc">Misc</option>
+            </select>
+          </div>
+
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            {fakeProducts.map((product) => {
+            {filteredProducts.map((product) => {
               const hasImage = Boolean(product.imageURL);
               const src = hasImage ? product.imageURL : FALLBACK_IMAGE_URL;
 
@@ -35,7 +64,7 @@ const Products = () => {
                   <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[var(--color-pink)]/10 via-transparent to-transparent opacity-0 transition group-hover:opacity-100 space-y-2" />
 
                   {product.featured ? (
-                    <div className="absolute left-3 top-3 z-10">
+                    <div className="absolute z-10 left-3 top-3">
                       <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-pink)]/80 px-2.5 py-1 text-xs font-semibold text-[var(--color-text)] ring-1 ring-[var(--color-pink)]/35">
                         Featured
                       </span>
