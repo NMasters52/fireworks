@@ -82,7 +82,7 @@ const Products = () => {
                       {product.tags.map((tag) => (
                         <span
                           key={tag}
-                          className=" mt-1 rounded-full bg-white/5 px-2 py-0.5 text-md text-[var(--color-text)]/75 ring-1 ring-white/10"
+                          className=" mt-1 rounded-full bg-white/5 px-2 py-0.5 text-md text-[var(--color-text)]/75 ring-1 ring-white/10 capitalize"
                         >
                           {tag}
                         </span>
