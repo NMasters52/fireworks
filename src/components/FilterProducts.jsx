@@ -16,6 +16,8 @@ const FilterProducts = ({ filter, setFilter }) => {
         <option value="mortars">Mortars</option>
         <option value="salutes">Salutes</option>
         <option value="roman candles">Roman Candles</option>
+        <option value="big bores">Big Bores</option>
+        <option value="rockets">Rockets</option>
         <option value="misc">Misc</option>
       </select>
     </div>

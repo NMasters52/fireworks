@@ -9,14 +9,12 @@ const FALLBACK_IMAGE_URL =
 
 const Products = () => {
   const [filter, setFilter] = useState("");
-  console.log(filter);
 
   const filteredProducts = fakeProducts.filter((product) => {
     if (filter === "") return true;
 
     return product.tags.includes(filter);
   });
-  console.log(filteredProducts);
 
   return (
     <>
