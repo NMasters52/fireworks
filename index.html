@@ -2,9 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image" href="/src/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>fireworks</title>
+    <meta name="theme-color" content="#1a1518" />
+    <style>
+      /* This is the secret sauce. It runs before React loads. */
+      html,
+      body {
+        background-color: #1a1518 !important;
+        margin: 0;
+        color: #faf7f3;
+      }
+    </style>
+    <title>RascoFx</title>
   </head>
   <body>
     <div id="root"></div>
