@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
 import { fakeProducts } from "../data/fakeData.js";
 import { useState } from "react";
+import FilterProducts from "../components/FilterProducts.jsx";
 
 const FALLBACK_IMAGE_URL =
   "https://res.cloudinary.com/nmasters-dev/image/upload/v1766254359/IN4OjmY4wMHBFxIcbuvRLbS2U1RKIHTf73C50anrhcA4gFo9_ixpdsl.png";
@@ -27,23 +28,7 @@ const Products = () => {
 
       <section className="px-8 pb-10 sm:px-10 md:px-12">
         <div className="max-w-6xl m-auto">
-          <div className="p-4 mb-6 border-2 border-pink rounded-xl bg-black/20">
-            <label className="text-[var(--color-pink)] font-bold mr-4">
-              Filter By:
-            </label>
-            <select
-              className="p-2 border rounded-lg outline-none bg-background text-text border-pink/30"
-              value={filter}
-              onChange={(e) => setFilter(e.target.value)}
-            >
-              <option value="">All Products</option>
-              <option value="cakes">Cakes</option>
-              <option value="mortars">Mortars</option>
-              <option value="salutes">Salutes</option>
-              <option value="roman candles">Roman Candles</option>
-              <option value="misc">Misc</option>
-            </select>
-          </div>
+          <FilterProducts filter={filter} setFilter={setFilter} />
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {filteredProducts.map((product) => {
