@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader";
-import { fakeProducts } from "../data/fakeData.js";
+import { products } from "../data/products.js";
 import { useState } from "react";
 import FilterProducts from "../components/FilterProducts.jsx";
 
@@ -10,7 +10,7 @@ const FALLBACK_IMAGE_URL =
 const Products = () => {
   const [filter, setFilter] = useState("");
 
-  const filteredProducts = fakeProducts.filter((product) => {
+  const filteredProducts = products.filter((product) => {
     if (filter === "") return true;
 
     return product.tags.includes(filter);

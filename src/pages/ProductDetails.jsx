@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { fakeProducts } from "../data/fakeData.js";
+import { products } from "../data/products.js";
 
 const FALLBACK_IMAGE =
   "https://res.cloudinary.com/nmasters-dev/image/upload/v1766254359/IN4OjmY4wMHBFxIcbuvRLbS2U1RKIHTf73C50anrhcA4gFo9_ixpdsl.png";
@@ -8,7 +8,7 @@ const getEmbedUrl = (id) => (id ? `https://www.youtube.com/embed/${id}` : null);
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const product = fakeProducts.find((p) => p.id === Number(id));
+  const product = products.find((p) => p.id === Number(id));
 
   if (!product) {
     return (
@@ -34,7 +34,7 @@ const ProductDetails = () => {
       {/* Back link */}
       <Link
         to="/products"
-        className="inline-flex items-center gap-2 text-lg font-medium text-[var(--color-text)] hover:text-[var(--color-pink)] transition mb-10"
+        className="inline-flex items-center gap-2 text-xl font-medium text-[var(--color-text)] hover:text-[var(--color-pink)] transition mb-10 bg-pink/40 py-3 px-2 rounded-2xl"
       >
         <span className="text-2xl">←</span>
         Back to Products
@@ -98,7 +98,7 @@ const ProductDetails = () => {
             />
           </div>
 
-          <div className="flex flex-col justify-center flex-1">
+          <div className="flex flex-col flex-1">
             <h2 className="text-sm uppercase tracking-wider text-[var(--color-pink)] font-semibold mb-3">
               About this product
             </h2>

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { fakeProducts } from "../data/fakeData";
+import { products } from "../data/products";
 
 const FeaturedProducts = () => {
-  const featuredList = fakeProducts.filter((p) => p.featured === true);
+  const featuredList = products.filter((p) => p.featured === true);
 
   return (
     <section className="py-16 bg-[var(--color-background)]">
@@ -23,7 +23,7 @@ const FeaturedProducts = () => {
               className="group relative flex flex-col overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:border-[var(--color-pink)]/40"
             >
               {/* Image Area */}
-              <div className="relative w-full overflow-hidden aspect-video">
+              <div className="relative w-full aspect-video">
                 <img
                   src={product.imageURL}
                   alt={product.name}
