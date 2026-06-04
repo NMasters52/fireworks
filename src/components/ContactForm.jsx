@@ -8,7 +8,7 @@ const ContactForm = () => {
     </p>
   ) : (
     <form
-      action="https://formspree.io/f/xanrgbkq" // your endpoint here
+      action="https://formspree.io/f/meewojyj"
       method="POST"
       className="max-w-md mx-auto flex flex-col gap-4 bg-background text-text p-6 rounded-md"
     >
