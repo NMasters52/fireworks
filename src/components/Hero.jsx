@@ -19,7 +19,7 @@ export function Hero() {
         <img
           src="https://res.cloudinary.com/nmasters-dev/image/upload/v1780563552/FullLogo_NoBuffer-Photoroom_o7dvdt.png"
           alt="RascoFX Logo"
-          className="w-1/2 h-auto mb-6"
+          className="w-4/5 sm:w-2/3 md:w-1/2 lg:w-1/3 h-auto mb-6 lg:mb-4"
         />
 
         {/* Tagline - Version 1: Bebas Neue (Bold, Uppercase, Impactful)
@@ -48,13 +48,24 @@ export function Hero() {
 
         {/* Tagline - Version 2: Playfair Display (Elegant Serif) */}
         <p
-          className="max-w-lg mb-10 text-3xl italic sm:text-4xl md:text-5xl"
+          className="max-w-lg mb-10 lg:mb-6 text-3xl italic sm:text-4xl md:text-5xl lg:text-4xl"
           style={{
             color: "rgba(250, 247, 243, 0.9)",
             fontFamily: "'Playfair Display', serif",
           }}
         >
           We provide the best{" "}
+          <span
+            style={{
+              background: "linear-gradient(135deg, #D64D85, #08D9CB)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
+            boom
+          </span>{" "}
+          for your{" "}
           <span
             onClick={() => setShowModal(true)}
             className="inline cursor-default transition-all duration-300 hover:scale-105 active:scale-95"
@@ -65,9 +76,8 @@ export function Hero() {
               backgroundClip: "text",
             }}
           >
-            boom
-          </span>{" "}
-          for your buck
+            buck
+          </span>
         </p>
 
         {/* CTA Links */}
@@ -130,13 +140,13 @@ export function Hero() {
               className="text-2xl font-bold mb-3"
               style={{ color: "#FAF7F3" }}
             >
-              🎆 You found the easter egg!
+              💰 You found the pricing sheet!
             </h3>
             <p
               className="mb-6 text-sm"
               style={{ color: "rgba(250, 247, 243, 0.7)" }}
             >
-              Download the 2026 250th Anniversary Price List?
+              Download it to view it.
             </p>
             <div className="flex gap-4 justify-center">
               <a
