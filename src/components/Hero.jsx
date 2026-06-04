@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { launchFirework } from "../utils/fireworkLauncher";
 
 export function Hero() {
   const pinkColor = "#D64D85";
@@ -56,6 +57,14 @@ export function Hero() {
         >
           We provide the best{" "}
           <span
+            onClick={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              launchFirework(
+                rect.left + rect.width / 2,
+                rect.top + rect.height / 2
+              );
+            }}
+            className="inline cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95"
             style={{
               background: "linear-gradient(135deg, #D64D85, #08D9CB)",
               WebkitBackgroundClip: "text",
