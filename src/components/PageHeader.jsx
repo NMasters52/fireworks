@@ -21,7 +21,10 @@ const PageHeader = ({ title, content }) => {
       {/* Content */}
       <div className="relative flex justify-center h-full p-6">
         <div className="flex flex-col max-w-3xl m-auto space-y-4">
-          <h1 className="text-5xl font-bold text-[var(--color-text)] drop-shadow-[0_0_25px_rgba(214,77,133,0.4)]">
+          <h1
+            className="text-5xl font-bold text-[var(--color-text)] drop-shadow-[0_0_25px_rgba(214,77,133,0.4)]"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
             {title}
           </h1>
           <p className="text-lg font-medium text-[var(--color-text)]/80 max-w-2xl">
