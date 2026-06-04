@@ -85,6 +85,7 @@ export function Hero() {
           {/* Primary CTA */}
           <Link
             to="/products"
+            data-firework-target="products"
             className="min-h-[12] px-8 py-3 rounded-lg font-semibold text-base text-center transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             style={{
               backgroundColor: pinkColor,
@@ -103,6 +104,7 @@ export function Hero() {
           {/* Secondary CTA */}
           <Link
             to="/contact"
+            data-firework-target="contact"
             className="min-h-[12] px-8 py-3 rounded-lg font-semibold text-base text-center border-2 transition-all duration-300 hover:bg-[#D64D85]/10 active:scale-[0.98]"
             style={{
               borderColor: pinkColor,
