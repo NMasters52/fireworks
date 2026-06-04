@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { products } from "../data/products";
 
+const FALLBACK_IMAGE_URL =
+  "https://res.cloudinary.com/nmasters-dev/image/upload/v1766254359/IN4OjmY4wMHBFxIcbuvRLbS2U1RKIHTf73C50anrhcA4gFo9_ixpdsl.png";
+
 const FeaturedProducts = () => {
   const featuredList = products.filter((p) => p.featured === true);
 
@@ -23,38 +26,50 @@ const FeaturedProducts = () => {
               className="group relative flex flex-col overflow-hidden rounded-2xl bg-white/5 border border-white/10 transition-all duration-300 hover:border-[var(--color-pink)]/40"
             >
               {/* Image Area */}
-              <div className="relative w-full aspect-video">
+              <div className="relative aspect-[4/5] w-full overflow-hidden bg-white/5">
                 <img
                   src={product.imageURL}
                   alt={product.name}
                   className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                  onError={(e) => {
+                    const img = e.currentTarget;
+                    if (img.src === FALLBACK_IMAGE_URL) return;
+                    img.onerror = null;
+                    img.src = FALLBACK_IMAGE_URL;
+                  }}
                 />
+                <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-[var(--color-background)] to-transparent" />
               </div>
 
               {/* Content Area */}
-              <div className="flex flex-col flex-1 p-5">
-                <h3 className="text-xl font-bold text-[var(--color-text)] mb-4 line-clamp-1">
+              <div className="relative flex flex-1 flex-col p-3">
+                <h3 className="line-clamp-2 text-lg font-semibold text-[var(--color-text)]">
                   {product.name}
                 </h3>
 
-                {/* Larger, High-Visibility Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="mt-2 flex flex-wrap gap-1.5">
                   {product.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-[var(--color-pink)]/20 px-4 py-1.5 text-xs font-semibold text-[var(--color-text)] ring-1 ring-[var(--color-pink)]/40 capitalize tracking-wide"
+                      className="mt-1 rounded-full bg-white/5 px-2 py-0.5 text-md text-[var(--color-text)]/75 ring-1 ring-white/10 capitalize"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="mt-auto">
+                <div className="mt-auto pt-4">
                   <Link
                     to={`/products/${product.id}`}
-                    className="inline-flex w-full items-center justify-center rounded-xl bg-[var(--color-pink)] px-5 py-3 text-sm font-bold text-white shadow-[0_4px_14px_0_rgba(214,77,133,0.39)] transition-all hover:brightness-110 active:scale-95"
+                    className={[
+                      "inline-flex w-full items-center justify-center gap-2",
+                      "rounded-xl px-3 py-2 text-sm font-semibold",
+                      "bg-[var(--color-pink)] text-[var(--color-text)]",
+                      "shadow-[0_10px_25px_rgba(214,77,133,0.25)]",
+                      "transition hover:brightness-110 active:brightness-95",
+                    ].join(" ")}
                   >
-                    View Product 🧨
+                    View Details
                   </Link>
                 </div>
               </div>
