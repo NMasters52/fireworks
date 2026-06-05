@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { products } from "../data/products";
 
 const FALLBACK_IMAGE_URL =
-  "https://res.cloudinary.com/nmasters-dev/image/upload/v1766254359/IN4OjmY4wMHBFxIcbuvRLbS2U1RKIHTf73C50anrhcA4gFo9_ixpdsl.png";
+  "https://res.cloudinary.com/nmasters-dev/image/upload/v1780562410/FullLogo_kmxfpb.jpg";
 
 const FeaturedProducts = () => {
   const featuredList = products.filter((p) => p.featured === true);
