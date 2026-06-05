@@ -213,9 +213,12 @@ function buildFinale(W, H) {
 }
 
 /* ── React component ───────────────────────────────────────────── */
+const FIREWORKS_KEY = "rascofx-fireworks-played";
+
 export function FireworksOverlay({ onFinaleDone }) {
   const canvasRef = useRef(null);
-  const [visible, setVisible] = useState(true);
+  const alreadyPlayed = sessionStorage.getItem(FIREWORKS_KEY) === "true";
+  const [visible, setVisible] = useState(!alreadyPlayed);
   const [fading, setFading] = useState(false);
 
   useEffect(() => {
@@ -227,8 +230,9 @@ export function FireworksOverlay({ onFinaleDone }) {
     let finaleTriggered = false;
 
     function resize() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const parent = canvas.parentElement;
+      canvas.width = parent.offsetWidth;
+      canvas.height = parent.offsetHeight;
     }
     resize();
     window.addEventListener("resize", resize);
@@ -316,6 +320,7 @@ export function FireworksOverlay({ onFinaleDone }) {
       }
 
       if (allDone) {
+        sessionStorage.setItem(FIREWORKS_KEY, "true");
         onFinaleDone?.();
         setFading(true);
         setTimeout(() => {
@@ -341,7 +346,7 @@ export function FireworksOverlay({ onFinaleDone }) {
   return (
     <canvas
       ref={canvasRef}
-      className={`fixed inset-0 z-50 pointer-events-none transition-opacity duration-700 ${
+      className={`absolute inset-0 z-50 pointer-events-none transition-opacity duration-700 ${
         fading ? "opacity-0" : "opacity-100"
       }`}
     />

@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { products } from "../data/products.js";
 
 const FALLBACK_IMAGE =
-  "https://res.cloudinary.com/nmasters-dev/image/upload/v1766254359/IN4OjmY4wMHBFxIcbuvRLbS2U1RKIHTf73C50anrhcA4gFo9_ixpdsl.png";
+  "https://res.cloudinary.com/nmasters-dev/image/upload/v1780562410/FullLogo_kmxfpb.jpg";
 
 const getEmbedUrl = (id) => (id ? `https://www.youtube.com/embed/${id}` : null);
 

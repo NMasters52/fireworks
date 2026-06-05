@@ -5,7 +5,7 @@ import { useState } from "react";
 import FilterProducts from "../components/FilterProducts.jsx";
 
 const FALLBACK_IMAGE_URL =
-  "https://res.cloudinary.com/nmasters-dev/image/upload/v1766254359/IN4OjmY4wMHBFxIcbuvRLbS2U1RKIHTf73C50anrhcA4gFo9_ixpdsl.png";
+  "https://res.cloudinary.com/nmasters-dev/image/upload/v1780562410/FullLogo_kmxfpb.jpg";
 
 const Products = () => {
   const [filter, setFilter] = useState("");
@@ -37,7 +37,7 @@ const Products = () => {
                 <article
                   key={product.id}
                   className={[
-                    "group relative overflow-hidden rounded-2xl border",
+                    "group relative flex flex-col overflow-hidden rounded-2xl border",
                     "border-white/10 bg-black/20",
                     "shadow-[0_10px_30px_rgba(0,0,0,0.45)]",
                     "transition hover:-translate-y-0.5 hover:border-white/20",
@@ -73,7 +73,7 @@ const Products = () => {
                     <div className="absolute inset-x-0 bottom-0 h-24 bg-linear-to-t from-[var(--color-background)] to-transparent" />
                   </div>
 
-                  <div className="relative p-3">
+                  <div className="relative flex flex-1 flex-col p-3">
                     <h3 className="line-clamp-2 text-lg font-semibold text-[var(--color-text)]">
                       {product.name}
                     </h3>
@@ -89,7 +89,7 @@ const Products = () => {
                       ))}
                     </div>
 
-                    <div className="mt-5">
+                    <div className="mt-auto pt-4">
                       <Link
                         to={`/products/${product.id}`}
                         className={[

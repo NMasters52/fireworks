@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { launchFirework } from "../utils/fireworkLauncher";
+import { FireworksOverlay } from "./FireworksOverlay";
 
 export function Hero() {
   const pinkColor = "#D64D85";
@@ -14,6 +15,9 @@ export function Hero() {
       className="relative flex items-center justify-center w-full min-h-screen overflow-hidden"
       style={{ backgroundColor: "#1a1518" }}
     >
+      {/* Fireworks canvas */}
+      <FireworksOverlay />
+
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center px-6 py-12 text-center">
         {/* Logo */}
