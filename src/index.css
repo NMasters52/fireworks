@@ -18,6 +18,36 @@
   }
 }
 
+/* iOS-style bottom buttons: indent on hover */
+.ios-btn:hover {
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.2) !important;
+  filter: brightness(0.92);
+}
+.ios-btn:active {
+  box-shadow: inset 0 3px 8px rgba(0,0,0,0.3) !important;
+  filter: brightness(0.88);
+}
+
 .firework-glow {
   animation: firework-pulse 2s ease-in-out infinite;
+}
+
+/* Slow spin for logo ring */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Float animation for business card orbs */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
